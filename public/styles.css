@@ -1,0 +1,90 @@
+.kBackground {
+    background-image: url(https://static.wikia.nocookie.net/westworld/images/1/17/Sweetwater_set_horse_buggy_and_tobacco_store_by_saloon.png/revision/latest?cb=20180611152044);
+    width: 99vw;
+    height: 96vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.kBrandText {
+    padding-top: 18%;
+    color: white;
+}
+
+* {
+    font-family: 'Kelly Slab', cursive;
+}
+
+.kHeading {
+    font-family: 'Rye', cursive;
+    font-size: 60px;
+}
+
+.kHeadingStyles {
+    text-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.75);
+}
+
+.kSubheading {
+    font-family: 'Cherry Swash', cursive;
+}
+
+button {
+    margin: 20px;
+    outline: none;
+}
+
+.custom-btn {
+    width: 300px;
+    height: 50px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-15 {
+    color: #fff;
+    z-index: 1;
+}
+ 
+.btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #7A7866;
+    transition: all 0.3s ease;
+}
+
+.btn-15:hover {
+    color: #282729;
+}
+.btn-15:hover:after {
+    left: 0;
+    width: 100%;
+}
+.btn-15:active {
+    top: 2px;
+}
+
+
+.kLoginBackground {
+    background-image: url(https://projectfandom.com/wp-content/uploads/2018/05/Westworld-S2E5-Dolores-and-Teddy.jpeg);
+    width: 99vw;
+    height: 96vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#kAddBody {
+    background: #41322E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #747261, #41322E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #747261, #41322E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

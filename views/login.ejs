@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+    <div class="kLoginBackground">
+        <div class="container" style="padding: 15px;">
+            <div class="form-row">
+                <div class="form-group col-lg-5 border rounded" style="padding: 20px; background-color: rgba(255, 255, 255, 0.7); margin: 0 auto;">
+                    <div class="text-center">
+                        <h1 class="kHeading kHeadingStyles" style="font-size: 40px;">Login</h1>
+                    </div>
+                    <hr>
+                    <form method="POST" action="/login">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input name="username" required type="email" class="form-control" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input name="password" required type="password" class="form-control">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="kSubheading custom-btn btn-15" style="color: black;">Login</button>
+                        </div>
+                        <hr>
+                        <div class="text-center">
+                            <p>New to restaurant? <a href="register" style="text-decoration: none;">Create a new account</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<%- include('partials/footer') %>

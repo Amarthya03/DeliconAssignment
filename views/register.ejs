@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+    <div class="kLoginBackground">
+        <div class="container" style="padding: 15px;">
+            <div class="form-row">
+                <div class="form-group col-lg-5 border rounded" style="padding: 20px; background-color: rgba(255, 255, 255, 0.7); margin: 0 auto;">
+                    <div class="text-center">
+                        <h1 class="kHeading kHeadingStyles" style="font-size: 40px;">Register</h1>
+                    </div>
+                    <hr>
+                    <form method="POST" action="/register">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input name="username" type="email" required class="form-control" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input name="password" type="password" required class="form-control">
+                            <small id="emailHelp" class="form-text text-muted">We suggest you to use a combination of alphabets, numbers and symbols.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm Password</label>
+                            <input type="password" required class="form-control">
+                            <small id="emailHelp" class="form-text text-muted">Make sure the passwords match.</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check text-center">
+                                <input class="form-check-input" required type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                I agree to the <a style="text-decoration: none;" href="">Terms and Conditions</a>
+                                </label>
+                            </div>
+                        </div>  
+
+                        <div class="text-center">
+                            <button type="submit" class="kSubheading custom-btn btn-15" style="color: black;">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<%- include('partials/footer') %>

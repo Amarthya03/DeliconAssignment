@@ -1,0 +1,92 @@
+<%- include('partials/header') %>
+    <body id="kAddBody">
+        
+        <div class="kAddReservationBackground" style="padding: 20px;">
+            <div class="border rounded container" style="background-color: rgba(255, 255, 255, 0.7); padding: 15px;">
+                <h1 class="text-center kHeading kHeadingStyles" style="font-size: 40px;">Add Reservation</h1>
+                <hr>
+                <form method="POST" action="/add">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Name</label>
+                            <input name="reservation[uname]" required type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input name="reservation[email]" type="email" required class="form-control" id="inputEmail4">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </div>
+                
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Contact</label>
+                            <input name="reservation[contact]" type="text" required class="form-control">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your contact info with anyone else.</small>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Address</label>
+                            <input name="reservation[address]" type="text" required class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                    </div>
+                
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input name="reservation[city]" type="text" required class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label >State</label>
+                            <input name="reservation[state]" type="text" required class="form-control">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input name="reservation[zip]" type="text" required class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>Date of Arrival</label>
+                            <input name="reservation[date]" type="date" required class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Attached Bathroom</label>
+                            <select name="reservation[bathroom]" id="inputState" required class="form-control">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>No. of Beds</label>
+                            <input name="reservation[beds]" type="number" min="1" max="3" required class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Food Service</label>
+                            <select name="reservation[food]" id="inputState" required class="form-control">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                
+                    <div class="form-group">
+                        <div class="form-check text-center">
+                            <input class="form-check-input" required type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                I agree to the <a href="">Terms and Conditions</a>
+                            </label>
+                        </div>
+                    </div>    
+                    
+                    <div class="text-center">
+                        <button type="submit" class="kSubheading custom-btn btn-15" style="color: black;">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <%- include('partials/footer') %>
