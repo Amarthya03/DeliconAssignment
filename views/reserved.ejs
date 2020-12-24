@@ -1,3 +1,25 @@
 <%- include('partials/header') %>
-    
+    <div id="kReservedBackground">
+        <div class="container" style="padding-top: 20px;">
+            <div class="card" style="width: 100%; background-color: rgba(255, 255, 255, 0.8);">
+                <div class="card-body">
+                <h5 class="card-title text-center kHeading" style="font-size: 30px;"><%= reservation.uname %>'s Receipt</h5>
+                <h6 class="text-right"><b class="kSubheading">Date of Accomodation: </b> <%= reservation.date %></h6>
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">E-mail:</b> <%= reservation.email %></h5>
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">Contact:</b> <%= reservation.contact %></h5>
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">Address:</b> <%- reservation.address %></h5>
+                <h5 class="card-subtitle mb-2"> <%= reservation.city %>, <%= reservation.state %> (<%= reservation.zip %>) </h5>
+                <hr>
+
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">Bathroom:</b> <%= reservation.bathroom %></h5>
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">No. of beds:</b> <%= reservation.beds %></h5>
+                <h5 class="card-subtitle mb-2"><b class="kSubheading">Food service:</b> <%= reservation.food %></h5>
+                    <form class="text-right" action="/reservation/<%= reservation._id %>?_method=DELETE" method="POST">
+                        <a href="/reservation/<%= reservation._id %>/edit" class="custom-btn btn-15 text-center" style="text-decoration: none; width: 120px; color: black;"><i class="fas fa-user-edit"></i> Edit</a>
+                        <input type="submit" class="custom-btn btn-15" style="width: 100px; color: black;" value="Delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 <%- include('partials/footer') %>

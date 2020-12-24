@@ -54,10 +54,15 @@ router.get('/reservation/:id/edit', isLoggedIn, (req, res) => {
     })
 })
 
-router.put("/reservation:id", isLoggedIn, (req, res) => {
+router.put("/reservation/:id", isLoggedIn, (req, res) => {
     var data = req.body.reservation;
     Reservations.findByIdAndUpdate(req.params.id, data, (err, updated) => {
-
+        if(err) {
+            console.log(err);
+            res.redirect('/reservation');
+        } else {
+            res.redirect('/reservation/' + req.params.id);
+        }
     })
 })
 
@@ -67,7 +72,7 @@ router.delete("/reservation/:id", isLoggedIn, (req, res) => {
             console.log(err);
             res.redirect("/reservation");
         } else {
-            res.redirect("/reservation/" + req.params.id);
+            res.redirect("/reservation");
         }
     })
 })

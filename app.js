@@ -1,5 +1,6 @@
 // * Required JS Libraries
 var express                 = require('express');
+require('dotenv').config();
 var bodyParser              = require('body-parser');
 var mongoose                = require('mongoose');
 var passport                = require('passport');
@@ -10,8 +11,9 @@ var methodOverride          = require('method-override');
 // * Setting up the Port
 var PORT    = process.env.PORT || 3000;
 
+console.log(process.env.MONGODB_URL);
 // * Establishing Mongo Connection
-mongoose.connect('mongodb://localhost:27017/deliconassignment', {useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser:true, useUnifiedTopology: true})
 var User = require("./models/user");
 
 // * Importing the routes

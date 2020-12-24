@@ -1,5 +1,5 @@
 .kBackground {
-    background-image: url(https://static.wikia.nocookie.net/westworld/images/1/17/Sweetwater_set_horse_buggy_and_tobacco_store_by_saloon.png/revision/latest?cb=20180611152044);
+    background-image: url(images/mariposa.png);
     width: 99vw;
     height: 96vh;
     background-position: center;
@@ -84,7 +84,21 @@ button {
 
 #kAddBody {
     background: #41322E;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #747261, #41322E);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #747261, #41322E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #dddcd1, #41322E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dddcd1, #41322E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+#kReservationsBackground {
+    background-image: url(images/dolores.jpg);
+    width: 99vw;
+    height: 96vh;
+    background-size: cover;
+}
+
+#kReservedBackground {
+    background-image: url(images/mariposa2.png);
+    width: 99vw;
+    height: 96vh;
+    background-size: cover;
 }
