@@ -11,7 +11,6 @@ var methodOverride          = require('method-override');
 // * Setting up the Port
 var PORT    = process.env.PORT || 3000;
 
-console.log(process.env.MONGODB_URL);
 // * Establishing Mongo Connection
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser:true, useUnifiedTopology: true})
 var User = require("./models/user");

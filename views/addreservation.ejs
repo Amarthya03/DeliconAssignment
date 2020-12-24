@@ -75,10 +75,89 @@
                 
                     <div class="form-group">
                         <div class="form-check text-center">
+
+                                <div class="popup" id="popup-1">
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                        <br>
+                                        <h1 class="kSubheading">Terms and Conditions</h1>
+                                        <p>
+                                            No refunds. <br>
+                                            Any damage caused will be charged in form of fine.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    .popup .overlay {
+                                        position:fixed;
+                                        top:0px;
+                                        left:0px;
+                                        width:100vw;
+                                        height:100vh;
+                                        background:rgba(0,0,0,0.7);
+                                        z-index:1;
+                                        display:none;
+                                    }
+
+                                    .popup .content {
+                                        position:absolute;
+                                        top:50%;
+                                        left:50%;
+                                        transform:translate(-50%,-50%) scale(0);
+                                        background:#fff;
+                                        width:100%;
+                                        height:250px;
+                                        z-index:2;
+                                        text-align:center;
+                                        padding:20px;
+                                        box-sizing:border-box;
+                                        font-family:"Open Sans",sans-serif;
+                                    }
+
+                                    .popup .close-btn {
+                                        cursor:pointer;
+                                        position:absolute;
+                                        right:20px;
+                                        top:20px;
+                                        width:30px;
+                                        height:30px;
+                                        background:#222;
+                                        color:#fff;
+                                        font-size:25px;
+                                        font-weight:600;
+                                        line-height:30px;
+                                        text-align:center;
+                                        border-radius:50%;
+                                    }
+
+                                    .popup.active .overlay {
+                                        display:block;
+                                    }
+
+                                    .popup.active .content {
+                                        transition:all 300ms ease-in-out;
+                                        transform:translate(-50%,-50%) scale(1);
+                                    }
+                                </style>
+
+
+
+
+
                             <input class="form-check-input" required type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
-                                I agree to the <a style="text-decoration: none;" href="">Terms and Conditions</a>
+                                I agree to the <span style="text-decoration: none; cursor: pointer;" onclick="togglePopup()">Terms and Conditions</span>
                             </label>
+
+                            <script>
+                                function togglePopup(){
+                                    document.getElementById("popup-1").classList.toggle("active");
+                                }
+                            </script>
+
+
                         </div>
                     </div>    
                     
